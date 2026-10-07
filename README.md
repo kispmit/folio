@@ -1,5 +1,13 @@
 # Folio
 
+## Public repository setup
+
+Each person runs their own local workspace. Start with `start.cmd` using Node.js 24 or later. The app creates a new local database automatically; no database from another user is needed.
+
+Demo mode needs no credentials. For live data, add your own Finnhub key in Settings, or copy `.env.example` to `.env` and enter your own key locally. Never commit `.env`, the `data/` directory, database backups, or API keys.
+
+Security notice: an earlier revision included a local database containing a saved API key. Removing it from the latest revision does not remove it from Git history. The exposed key must be revoked and replaced; history cleanup is a separate operation.
+
 A free, local US-stock portfolio and company-news template. Demo mode is the default: all prices are illustrative and all sample stories are fictional.
 
 ## Run
